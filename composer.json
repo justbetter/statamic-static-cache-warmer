@@ -1,0 +1,45 @@
+{
+    "name": "just-better/statamic-static-cache-warmer",
+    "description": "Automaticly warms the static cache when it's cleared.",
+    "require": {
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.4",
+        "laravel/pint": "^1.22",
+        "orchestra/testbench": "^10.3",
+        "phpstan/phpstan-mockery": "^2.0",
+        "phpunit/phpunit": "^12.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "JustBetter\\StaticCacheWarmer\\": "src/"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Static cache warmer",
+            "description": "Warms the static cache for pages when it's cleared."
+        },
+        "laravel": {
+            "providers": [
+                "JustBetter\\StaticCacheWarmer\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan --memory-limit=1G",
+        "style": "pint --test",
+        "quality": [
+            "@test",
+            "@analyse",
+            "@style"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    }
+}
