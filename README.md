@@ -4,7 +4,7 @@
 
 # Statamic Static cache warmer
 
-This Statamic addon provides event listeners to automaticly warm the static cache of urls when they are cleared.
+This Statamic addon provides event listeners to automatically warm the static cache of urls when they are cleared.
 
 ## Requirements
 
