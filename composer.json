@@ -2,7 +2,9 @@
     "name": "just-better/statamic-static-cache-warmer",
     "description": "Automaticly warms the static cache when it's cleared.",
     "require": {
-        "statamic/cms": "^5.0"
+        "statamic/cms": "^5.0",
+        "php": "^8.3|^8.4",
+        "statamic/eloquent-driver": "^4.35"
     },
     "require-dev": {
         "larastan/larastan": "^3.4",
