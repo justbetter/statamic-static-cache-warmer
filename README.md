@@ -1,3 +1,7 @@
+<a href="github.com/justbetter/statamic-static-cache-warmer" title="JustBetter">
+    <img src="./art/banner.svg" alt="Banner">
+</a>
+
 # Statamic Static cache warmer
 
 This Statamic addon provides event listeners to automaticly warm the static cache of urls when they are cleared.
@@ -26,3 +30,26 @@ php artisan vendor:publish --tag=justbetter-static-cache-warmer
 
 You can now find the config file at `config/justbetter/static-cache-warmer.php`.
 After publishing the config, you can set the queue.
+
+
+## Credits
+
+- [Vincent Boon](https://github.com/BobWez98)
+- [Ramon Rietdijk](https://github.com/kevinmeijer97)
+- [All Contributors](../../contributors)
+
+## Contributing
+
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+
+## Security Vulnerabilities
+
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
+
+<a href="https://justbetter.nl" title="JustBetter">
+    <img src="./art/footer.svg" alt="JustBetter logo">
+</a>
