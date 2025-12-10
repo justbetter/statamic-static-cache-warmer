@@ -18,6 +18,11 @@
             "JustBetter\\StaticCacheWarmer\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "JustBetter\\StaticCacheWarmer\\Tests\\": "tests"
+        }
+    },
     "extra": {
         "statamic": {
             "name": "Static cache warmer",
