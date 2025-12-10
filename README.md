@@ -34,8 +34,8 @@ After publishing the config, you can set the queue.
 
 ## Credits
 
-- [Vincent Boon](https://github.com/BobWez98)
-- [Ramon Rietdijk](https://github.com/kevinmeijer97)
+- [Bob Wezelman](https://github.com/BobWez98)
+- [Kevin Meijer](https://github.com/kevinmeijer97)
 - [All Contributors](../../contributors)
 
 ## Contributing
