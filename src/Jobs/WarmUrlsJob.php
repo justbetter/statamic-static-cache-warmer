@@ -10,13 +10,13 @@ class WarmUrlsJob implements ShouldQueue
 {
     use Queueable;
 
+    public function __construct()
+    {
+        $this->onQueue(config()->string('justbetter.static-cache-warmer.queue'));
+    }
+
     public function handle(WarmsUrls $warmsUrls): void
     {
         $warmsUrls->warm();
-    }
-
-    public function onQueue(): mixed
-    {
-        return config('justbetter.static-cache-warmer.queue');
     }
 }

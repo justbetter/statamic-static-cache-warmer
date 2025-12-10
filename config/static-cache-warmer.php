@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'queue' => 'cache-warmer',
+    'queue' => 'default',
 ];

@@ -11,7 +11,10 @@ class WarmUrlJob implements ShouldBeUnique, ShouldQueue
 {
     use Queueable;
 
-    public function __construct(protected string $url) {}
+    public function __construct(protected string $url) 
+    {
+        $this->onQueue(config()->string('justbetter.static-cache-warmer.queue'));
+    }   
 
     public function handle(WarmsUrl $warmsEntry): void
     {
@@ -24,17 +27,12 @@ class WarmUrlJob implements ShouldBeUnique, ShouldQueue
     }
 
     /**
-     * @return array<int, string>
+     * @return array<int, string>   
      */
     public function tags(): array
     {
         return [
             $this->url,
         ];
-    }
-
-    public function onQueue(): mixed
-    {
-        return config('justbetter.static-cache-warmer.queue');
     }
 }

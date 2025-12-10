@@ -4,8 +4,8 @@ namespace JustBetter\StaticCacheWarmer\Actions;
 
 use JustBetter\StaticCacheWarmer\Contracts\WarmsUrls;
 use JustBetter\StaticCacheWarmer\Jobs\WarmUrlJob;
-use Statamic\Eloquent\Entries\EntryQueryBuilder;
 use Statamic\Facades\Entry;
+use Statamic\Eloquent\Entries\EntryQueryBuilder;
 
 class WarmUrls implements WarmsUrls
 {
