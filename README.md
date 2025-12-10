@@ -1,9 +1,6 @@
 # Statamic Static cache warmer
 
-
-## Features
-
-- 🔄 Automaticly warming an entry's static cache when cleared
+This Statamic addon provides event listeners to automaticly warm the static cache of urls when they are cleared.
 
 ## Requirements
 
@@ -21,15 +18,11 @@ composer require just-better/statamic-static-cache-warmer
 
 ## Configuration
 
-Make sure to publish the config by running:
+You can publish the config by
 
 ```bash
-php artisan vendor:publish --tag=justbetter-structured-data
+php artisan vendor:publish --tag=justbetter-static-cache-warmer
 ```
 
-You can now find the config file at `config/justbetter/structured-data.php`.
-After publishing the config, you can set the collections and taxonomies that should have structured data templates.
-
-## Usage
-
-## Configuration
+You can now find the config file at `config/justbetter/static-cache-warmer.php`.
+After publishing the config, you can set the queue.
