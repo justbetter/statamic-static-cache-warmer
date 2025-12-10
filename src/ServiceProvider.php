@@ -6,8 +6,5 @@ use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    public function bootAddon(): void
-    {
-
-    }
+    public function bootAddon(): void {}
 }

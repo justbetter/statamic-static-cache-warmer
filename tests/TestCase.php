@@ -2,8 +2,8 @@
 
 namespace JustBetter\StaticCacheWarmer\Tests;
 
-use Orchestra\Testbench\TestCase as BaseTestCase;
 use JustBetter\StaticCacheWarmer\ServiceProvider;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
 {
