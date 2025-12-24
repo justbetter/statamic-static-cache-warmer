@@ -2,6 +2,7 @@
 
 namespace JustBetter\StaticCacheWarmer\Actions;
 
+use Illuminate\Support\Facades\Bus;
 use JustBetter\StaticCacheWarmer\Contracts\WarmsUrls;
 use JustBetter\StaticCacheWarmer\Jobs\WarmUrlJob;
 use Statamic\Eloquent\Entries\EntryQueryBuilder;
@@ -16,8 +17,13 @@ class WarmUrls implements WarmsUrls
 
         $entries = $query->whereNotNull('uri')->lazy();
 
+        $jobs = [];
         foreach ($entries as $entry) {
-            WarmUrlJob::dispatch($entry->absoluteUrl());
+            $jobs[] = new WarmUrlJob($entry->absoluteUrl());
+        }
+
+        if (! empty($jobs)) {
+            Bus::batch($jobs)->dispatch();
         }
     }
 
