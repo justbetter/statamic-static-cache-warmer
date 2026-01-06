@@ -23,7 +23,7 @@ class WarmUrls implements WarmsUrls
         }
 
         if (! empty($jobs)) {
-            Bus::batch($jobs)->dispatch();
+            Bus::batch($jobs)->dispatchAfterResponse();
         }
     }
 
