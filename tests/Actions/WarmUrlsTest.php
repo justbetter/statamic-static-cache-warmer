@@ -14,7 +14,7 @@ use Statamic\Facades\Entry as EntryFacade;
 class WarmUrlsTest extends TestCase
 {
     #[Test]
-    public function it_can_dispatch_jobs(): void
+    public function it_can_dispatch_jobs_in_batch(): void
     {
         Bus::fake();
 
@@ -34,6 +34,9 @@ class WarmUrlsTest extends TestCase
 
         $action->warm();
 
-        Bus::assertDispatched(WarmUrlJob::class);
+        Bus::assertBatched(function ($batch) {
+            return $batch->jobs->count() > 0
+                && $batch->jobs->first() instanceof WarmUrlJob;
+        });
     }
 }

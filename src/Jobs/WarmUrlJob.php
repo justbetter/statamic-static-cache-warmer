@@ -2,6 +2,7 @@
 
 namespace JustBetter\StaticCacheWarmer\Jobs;
 
+use Illuminate\Bus\Batchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
@@ -9,7 +10,7 @@ use JustBetter\StaticCacheWarmer\Contracts\WarmsUrl;
 
 class WarmUrlJob implements ShouldBeUnique, ShouldQueue
 {
-    use Queueable;
+    use Batchable, Queueable;
 
     public function __construct(protected string $url)
     {
